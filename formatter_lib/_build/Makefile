@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named formatter
+# Target rules for targets named formatter_lib
 
 # Build rule for target.
-formatter: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter
-.PHONY : formatter
+formatter_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter_lib
+.PHONY : formatter_lib
 
 # fast build rule for target.
-formatter/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/build
-.PHONY : formatter/fast
+formatter_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_lib.dir/build.make CMakeFiles/formatter_lib.dir/build
+.PHONY : formatter_lib/fast
 
 formatter.o: formatter.cpp.o
 .PHONY : formatter.o
 
 # target to build an object file
 formatter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/formatter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_lib.dir/build.make CMakeFiles/formatter_lib.dir/formatter.cpp.o
 .PHONY : formatter.cpp.o
 
 formatter.i: formatter.cpp.i
@@ -142,7 +142,7 @@ formatter.i: formatter.cpp.i
 
 # target to preprocess a source file
 formatter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/formatter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_lib.dir/build.make CMakeFiles/formatter_lib.dir/formatter.cpp.i
 .PHONY : formatter.cpp.i
 
 formatter.s: formatter.cpp.s
@@ -150,7 +150,7 @@ formatter.s: formatter.cpp.s
 
 # target to generate assembly for a file
 formatter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter.dir/build.make CMakeFiles/formatter.dir/formatter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/formatter_lib.dir/build.make CMakeFiles/formatter_lib.dir/formatter.cpp.s
 .PHONY : formatter.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... formatter"
+	@echo "... formatter_lib"
 	@echo "... formatter.o"
 	@echo "... formatter.i"
 	@echo "... formatter.s"
